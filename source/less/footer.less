@@ -2,3 +2,40 @@
   margin: 0;
   padding: 0;
 }
+
+.page-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  min-height: 236px;
+}
+
+.page-footer__logo-link {
+  height: 24px;
+  width: 128px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    width: 768px;
+    padding: 0 30px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    min-height: 151px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 1300px;
+    padding: 0 40px;
+
+    min-height: 148px;
+  }
+}

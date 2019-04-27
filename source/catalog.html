@@ -5,11 +5,12 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link href="fonts/oswaldmedium.woff2" rel="stylesheet">
     <link href="fonts/oswaldregular.woff2" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <div class="wrapper">
+      <!-- <div class="wrapper"> -->
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="CAT ENERGY">
         </a>
@@ -27,13 +28,13 @@
             </li>
           </ul>
         </nav>
-      </div>
+      <!-- </div> -->
     </header>
     <main class="page-catalog">
-      <div class="wrapper">
+      <!-- <div class="wrapper"> -->
         <h1 class="page-catalog__title">Каталог продукции</h1>
-        <ul class="page-catalog__list catalog-list">
-          <li class="catalog-list__item product">
+        <ul class="page-catalog__list">
+          <li class="page-catalog__item product">
             <img class="product__image" src="img/chicken-small-mobile@1x.jpg" with="140" height="144" alt="упаковка товара">
             <div class="product__description">
               <h4 class="product__title">Cat energy pro
@@ -55,7 +56,7 @@
             </div>
             <a class="product__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item product">
+          <li class="page-catalog__item product">
             <img class="product__image" src="img/chicken-big-mobile@1x.jpg" with="140" height="144" alt="упаковка товара">
             <div class="product__description">
               <h4 class="product__title">Cat energy pro
@@ -78,7 +79,7 @@
             </div>
             <a class="product__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item product">
+          <li class="page-catalog__item product">
             <img class="product__image" src="img/fish-small-mobile@1x.jpg" with="140" height="144" alt="упаковка товара">
             <div class="product__description">
               <h4 class="product__title">Cat energy pro
@@ -101,7 +102,7 @@
             </div>
             <a class="product__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item product">
+          <li class="page-catalog__item product">
             <img class="product__image" src="img/fish-big-mobile@1x.jpg" with="140" height="144" alt="упаковка товара">
             <div class="product__description">
               <h4 class="product__title">Cat energy pro
@@ -124,7 +125,7 @@
             </div>
             <a class="product__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item product">
+          <li class="page-catalog__item product">
             <img class="product__image" src="img/buckwheat-small-mobile@1x.jpg" with="140" height="144" alt="упаковка товара">
             <div class="product__description">
               <h4 class="product__title">Cat energy slim
@@ -147,7 +148,7 @@
             </div>
             <a class="product__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item product">
+          <li class="page-catalog__item product">
             <img class="product__image" src="img/buckwheat-big-mobile@1x.jpg" with="140" height="144" alt="упаковка товара">
             <div class="product__description">
               <h4 class="product__title">Cat energy slim
@@ -170,7 +171,7 @@
             </div>
             <a class="product__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item product">
+          <li class="page-catalog__item product">
             <img class="product__image" src="img/rice-small-mobile@1x.jpg" with="140" height="144" alt="упаковка товара">
             <div class="product__description">
               <h4 class="product__title">Cat energy slim
@@ -193,13 +194,13 @@
             </div>
             <a class="product__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog-list__item product product--more">
+          <li class="page-catalog__item product product--more">
             <h4 class="product__titel">Показать еще 100500 товаров</h4>
             <p class="product__info">На самом деле вкусов гораздо больше!</p>
             <a class="product__button product__button--gray button" href="#">Показать еще</a>
           </li>
         </ul>
-      </div>
+      <!-- </div> -->
     </main>
     <section class="additions">
       <h2 class="additions__titel">Дополнительные товары</h2>
@@ -237,7 +238,7 @@
           <a class="goods__button button" href="#">Заказать</a>
         </li>
       </ul>
-      <div class="stock">
+      <div class="additions__stock stock">
         <p class="stock__info">Закажите все и получите чехол для кота в подарок!</p>
       </div>
     </section>
@@ -254,7 +255,7 @@
         <!--временная картинка карты-->
         <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта">
       </div>
-      <div class="wrapper">
+      <div class="page-footer__wrapper">
         <a class="page-footer__logo-link">
           <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Cat energy">
         </a>

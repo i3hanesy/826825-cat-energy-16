@@ -1,13 +1,24 @@
 .diet {
-  margin: 0;
-  padding: 0;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0 20px;
+
+  box-sizing: border-box;
 }
 
 .diet__type {
   background-color: #f2f2f2;
+  margin-bottom: 20px;
+
+  // временно
+  min-height: 266px;
 }
 
 .diet__title {
+  margin: 0;
+  padding: 0;
+
   font-size: 24px;
   line-height: 37px;
 }
@@ -23,4 +34,33 @@
 .diet__button {
   font-size: 16px;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .diet {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  .diet__type {
+    margin-bottom: 30px;
+
+    min-height: 372px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .diet {
+    display: flex;
+    width: 1300px;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  .diet__type {
+    width: 570px;
+    margin-bottom: 0;
+
+    min-height: 374px;
+  }
 }

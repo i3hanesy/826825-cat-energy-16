@@ -1,23 +1,15 @@
-.page-form {
+.form {
   margin: 0;
   padding: 0;
-
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.page-form__title {
-  font-size: 36px;
-  line-height: 60px;
-}
-
-.page-form__promo {
-  font-size: 14px;
 }
 
 .form__fieldset {
+  margin: 0;
+  padding: 0;
   font-size: 24px;
   line-height: 24px;
+
+  border: none;
 }
 
 .form__legend {
@@ -28,7 +20,91 @@
   font-weight: normal;
 }
 
+.form__row {
+  display: flex;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.radio-field__label,
+.checkbox-field__label,
+.text-field__label {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.text-field__label {
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
 .text-field__input {
-  font: inherit;
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 18px;
   color: #444444;
+}
+
+.form__fieldset--area .form__row {
+  flex-direction: column;
+}
+
+.form__fieldset--area .text-field__input {
+  min-height: 150px;
+  box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    paddig-left: 40px;
+    padding-right: 38px;
+  }
+
+  .radio-field__label,
+  .checkbox-field__label,
+  .text-field__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .text-field__input {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__fieldset {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .form__fieldset--owner,
+  .form__fieldset--area,
+  .form__fieldset--checkbox {
+    width: 100%;
+  }
+
+  .form__fieldset--cat,
+  .form__fieldset--program,
+  .form__fieldset--owner .form__row {
+    width: 570px;
+  }
+
+  .form__fieldset-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .checkbox-field {
+    width: 245px;
+  }
 }

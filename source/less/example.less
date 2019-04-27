@@ -1,11 +1,19 @@
 .example {
-  margin: 0;
-  padding: 0;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
 
+  box-sizing: border-box;
   background-color: #f2f2f2;
+
+  // временно
+  min-height: 707px;
 }
 
 .example__title {
+  margin: 0;
+  padding: 0;
+
   font-size: 36px;
   line-height: 60px;
 }
@@ -19,10 +27,17 @@
 }
 
 .example__list {
+  display: flex;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
 }
 
 .example__item-result {
@@ -54,4 +69,23 @@
 .example .control__element {
   font-size: 16px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    width: 768px;
+    padding: 0 30px;
+
+    //ВРЕМЕННО
+    min-height: 1082px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    width: 1300px;
+    padding: 0 40px;
+
+    min-height: 652px;
+  }
 }

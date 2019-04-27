@@ -1,6 +1,15 @@
 .contacts {
-  margin: 0;
-  padding: 0;
+  width: 320px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  min-height: 478px;
+}
+
+.contacts__info {
+  display: flex;
+  padding: 0 20px;
 }
 
 .contacts__invitation {
@@ -15,4 +24,25 @@
   color: #444444;
   font-weight: normal;
   font-style: normal;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    width: 768px;
+
+    // Временно
+    min-height: 597px;
+  }
+
+  .contacts__info {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    width: 1300px;
+
+    min-height: 400px;
+  }
 }
