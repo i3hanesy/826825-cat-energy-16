@@ -1,9 +1,17 @@
 .how-to {
-  margin: 0;
-  padding: 0;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 42px;
+
+  box-sizing: border-box;
+
+  min-height: 376px;
 }
 
 .how-to__title {
+  margin: 0;
+  padding: 0;
   font-size: 36px;
   line-height: 60px;
 }
@@ -21,4 +29,41 @@
   font-family: "Arial", sans-serif;
   font-weight: normal;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .how-to {
+    width: 768px;
+    padding: 0 30px;
+
+    min-height: 735px;
+  }
+
+  .how-to__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .how-to__item {
+    width: 354px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .how-to {
+    width: 1300px;
+    padding: 0 40px;
+    margin-bottom: 12px;
+
+    min-height: 390px;
+  }
+
+  .how-to__list {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .how-to__item {
+    width: 245px;
+  }
 }

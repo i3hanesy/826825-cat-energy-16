@@ -5,11 +5,12 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link href="fonts/oswaldmedium.woff2" rel="stylesheet">
     <link href="fonts/oswaldregular.woff2" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 <header class="page-header">
-      <div class="wrapper">
+      <!-- <div class="wrapper"> -->
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="CAT ENERGY">
         </a>
@@ -27,15 +28,15 @@
             </li>
           </ul>
         </nav>
-      </div>
+      <!-- </div> -->
     </header>
     <main class="page-form">
       <h1 class="page-form__title">Подбор программы</h1>
       <p class="page-form__promo">Заполните анкету и мы подберем
       программу питания для вашего кота</p>
-      <form class="page-form form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form__fieldset form__fieldset--cat">
-          <legend class="visualy-hidden">Данные кота</legend>
+          <legend class="visually-hidden">Данные кота</legend>
           <div class="form__row text-field">
             <label class="text-field__label" for="cat-name">Имя:<sup>*</sup></label>
             <input class="text-field__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
@@ -50,7 +51,7 @@
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--program">
-          <legend class="visualy-hidden">Выбор программы</legend>
+          <legend class="visually-hidden">Выбор программы</legend>
           <div class="form__row radio-field">
             <input class="radio-field__input" type="radio" name="program" value="weight-loss" id="loss-filter">
             <label class="radio-field__label" for="loss-filter">Похудение</label>
@@ -66,16 +67,18 @@
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--owner">
           <legend class="form__fieldset-titel">Контактные данные (владельца кота)</legend>
-          <div class="form__row text-field">
+          <div class="form__fieldset-wrapper">
+            <div class="form__row text-field">
             <label class="text-field__label" for="email">E-mail:<sup>*</sup></label>
-            <div class="text-field__input-wrapper">
+            <!-- <div class="text-field__input-wrapper"> -->
               <input class="text-field__input" type="email" name="email" id="email" placeholder="Kuklachev@gmail.com">
+            <!-- </div> -->
             </div>
-          </div>
-          <div class="form__row text-field">
+            <div class="form__row text-field">
             <label class="text-field__label" for="phone">Телефон:<sup>*</sup></label>
-            <div class="text-field__input-wrapper">
+            <!-- <div class="text-field__input-wrapper"> -->
               <input class="text-field__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+            <!-- </div> -->
             </div>
           </div>
         </fieldset>
@@ -88,21 +91,23 @@
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--checkbox">
           <legend class="form__fieldset-titel">Дополнительно</legend>
-          <div class="form__row checkbox-field">
-            <input class="checkbox-field__input" type="checkbox" name="sweetener" id="sweetener-filter" checked>
-            <label class="checkbox-field__label" for="sweetener-filter">Сахарозаменитель</label>
-          </div>
-          <div class="form__row checkbox-field">
-            <input class="checkbox-field__input" type="checkbox" name="water" id="water-filter">
-            <label class="checkbox-field__label" for="water-filter">Питьевая вода</label>
-          </div>
-          <div class="form__row checkbox-field">
-            <input class="checkbox-field__input" type="checkbox" name="milk" id="milk-filter">
-            <label class="checkbox-field__label" for="milk-filter">Молоко</label>
-          </div>
-          <div class="form__row checkbox-field">
-            <input class="checkbox-field__input" type="checkbox" name="vitamin" id="vitamin-filter">
-            <label class="checkbox-field__label" for="vitamin-filter">Витамины</label>
+          <div class="form__fieldset-wrapper">
+            <div class="form__row checkbox-field">
+              <input class="checkbox-field__input" type="checkbox" name="sweetener" id="sweetener-filter" checked>
+              <label class="checkbox-field__label" for="sweetener-filter">Сахарозаменитель</label>
+            </div>
+            <div class="form__row checkbox-field">
+              <input class="checkbox-field__input" type="checkbox" name="water" id="water-filter">
+              <label class="checkbox-field__label" for="water-filter">Питьевая вода</label>
+            </div>
+            <div class="form__row checkbox-field">
+              <input class="checkbox-field__input" type="checkbox" name="milk" id="milk-filter">
+              <label class="checkbox-field__label" for="milk-filter">Молоко</label>
+            </div>
+            <div class="form__row checkbox-field">
+              <input class="checkbox-field__input" type="checkbox" name="vitamin" id="vitamin-filter">
+              <label class="checkbox-field__label" for="vitamin-filter">Витамины</label>
+            </div>
           </div>
         </fieldset>
         <button class="form__button button" type="submit"></button>

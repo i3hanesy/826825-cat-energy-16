@@ -1,12 +1,46 @@
 .main-nav {
-  margin: 0;
-  padding: 0;
+  width: 320px;
+  margin: 0 auto;
 
   font-size: 20px;
   line-height: 20px;
   font-weight: normal;
+
+
+  // временно
+  min-height: 199px;
 }
 
 .main-nav__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 440px;
+    margin: 0;
+    //временно
+    min-height: 84px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 610px;
+
+    //временно
+    min-height: 113px;
+  }
+
+  .main-nav__list {
+    justify-content: flex-end;
+  }
 }

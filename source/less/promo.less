@@ -1,6 +1,8 @@
 .promo {
-  margin: 0;
-  padding: 0;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 22px;
+  padding: 0 20px;
 
   color: #ffffff;
 
@@ -9,14 +11,69 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 320px 305px;
+
+  box-sizing: border-box;
+  // временно
+  min-height: 480px;
 }
 
 .promo__titel {
+  margin: 0;
+  padding: 0;
   font-size: 36px;
   line-height: 36px;
 }
 
+
 .promo__slogan {
   font-size: 14px;
   line-height: 14px;
+}
+
+.promo__image {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.promo__button {
+  padding: 11px 22px;
+  font-size: 14px;
+  line-height: 18px;
+
+  box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    width: 768px;
+    margin-bottom: 0;
+    padding: 0 30px;
+
+    color: #111111;
+    background: none;
+
+    // временно
+    min-height: 869px;
+  }
+
+  .promo__button {
+    width: 245px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    width: 1300px;
+    padding: 0 40px;
+
+    background-color: #65a93c;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 320px 305px;
+
+    // временно
+    min-height: 660px;
+  }
 }
