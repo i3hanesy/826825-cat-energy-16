@@ -1,7 +1,42 @@
 .page-header {
-  margin: 0;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
   padding: 0;
 
-  /*временно*/
-  outline: 0.5px solid red;
+  box-sizing: border-box;
+}
+
+.page-header__logo {
+  width: 191px;
+  height: 38px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 768px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 30px;
+  }
+
+  .page-header__logo {
+    width: 173px;
+    height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1300px;
+    padding: 0 40px;
+  }
+
+  .page-header__logo {
+    widows: 203px;
+    height: 60px;
+  }
 }
