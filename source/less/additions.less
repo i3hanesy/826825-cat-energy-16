@@ -1,24 +1,27 @@
 .additions {
+  padding-top: 10px;
+  padding-bottom: 35px;
+
   display: flex;
   flex-direction: column;
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  box-sizing: border-box;
 }
 
 .additions__list {
   margin: 0;
+  margin-bottom: 36px;
   padding: 0;
 
   list-style: none;
 }
 
+.additions__list-item {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
 .additions__titel {
+  margin-bottom: 34px;
   width: 100%;
-  margin: 0;
-  padding: 0;
 
   font-size: 24px;
   line-height: 24px;
@@ -26,23 +29,52 @@
 
 @media (min-width: @tablet-width) {
   .additions {
-    width: 768px;
-    padding: 0 30px;
+    padding-bottom: 76px;
+  }
+
+  .additions__titel {
+    margin: 0;
+    margin-bottom: 81px;
+    margin-left: 39px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .additions__list {
+    margin-bottom: 70px;
+  }
+
+  .additions__list-item {
+    padding-left: 37px;
+    padding-right: 37px;
+
+    border: 1px solid #d9d9d9;
   }
 }
 
 @media (min-width: @desktop-width) {
   .additions {
-    width: 1300px;
-    padding: 0 40px;
-
+    padding-top: 15px;
+    padding-bottom: 16px;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .additions__titel {
+    margin: 0;
+    margin-bottom: 81px;
   }
 
   .additions__list {
     width: 895px;
     margin-right: auto;
+  }
+
+
+  .additions__list-item {
+    padding: 0;
+    border-left: none;
+    border-right: none;
   }
 
   .additions__stock {

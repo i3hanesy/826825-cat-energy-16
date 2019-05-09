@@ -1,16 +1,12 @@
 .page-form {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 20px;
-
+  padding-top: 15px;
   font-size: 16px;
   line-height: 18px;
-
-  box-sizing: border-box;
 }
 
 .page-form__title {
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
   font-size: 36px;
   line-height: 60px;
@@ -19,21 +15,36 @@
 .page-form__promo {
   margin: 0;
   padding: 0;
+  padding-right: 10px;
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
   .page-form {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 30px;
+    padding-top: 45px;
+  }
+
+  .page-form__title {
+    margin-bottom: 55px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .page-form__promo {
+    margin-left: 41px;
+    width: 347px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-form {
-    width: 1300px;
-    margin: 0 auto;
-    padding: 0 40px;
+    padding-top: 65px;
+  }
+
+  .page-form__promo {
+    margin-left: 0;
   }
 }

@@ -1,29 +1,77 @@
-.diet {
-  width: 320px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  padding: 0 20px;
-
-  box-sizing: border-box;
+.diet__type {
+  position: relative;
+  margin-bottom: 22px;
+  padding-top: 24px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f2f2f2;
 }
 
-.diet__type {
-  background-color: #f2f2f2;
-  margin-bottom: 20px;
+.diet__inner {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
-  // временно
-  min-height: 266px;
+.diet__inner::before {
+  content: "";
+  position: static;
+  display: block;
+  margin-top: -1px;
+  margin-left: 2px;
+  width: 50px;
+  height: 50px;
+  margin-right: 19px;
+  border-radius: 50%;
+  background-color: #68b738;
 }
 
 .diet__title {
+  position: relative;
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
+  padding-top: 5px;
 
   font-size: 24px;
   line-height: 37px;
+  text-transform: uppercase;
 }
 
+
+.diet__type--cat-sit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 36px;
+  height: 50px;
+  background-image: url("../img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.diet__type--cat-go::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 34px;
+  left: 13px;
+  width: 68px;
+  height: 50px;
+  background-image: url("../img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+
 .diet__intro {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 22px;
+
   font-size: 14px;
   line-height: 18px;
   font-family: "Arial", sans-serif;
@@ -32,35 +80,187 @@
 }
 
 .diet__button {
+  width: 100%;
+
   font-size: 16px;
   line-height: 16px;
+  text-transform: uppercase;
+
+  border-top: 1px solid #d9d9d9;
+}
+
+.diet__button-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 19px;
+  padding-right: 44px;
+  padding-bottom: 22px;
+  color: #111111;
+}
+
+.diet__button-link::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 9px;
+  width: 24px;
+  height: 11px;
+  background-image: url("../img/icon-right-arrow-verylong.svg");
+  background-repeat: no-repeat;
+  background-size: 32px 11px;
+  background-position: right center;
 }
 
 @media (min-width: @tablet-width) {
-  .diet {
-    width: 768px;
-    padding: 0 30px;
+  .diet__type {
+    position: relative;
+    display: flex;
+
+    margin-bottom: 32px;
+    padding: 77px 60px 62px 52px;
   }
 
-  .diet__type {
-    margin-bottom: 30px;
+  .diet__inner {
+    width: 370px;
+    align-items: flex-start;
+    flex-grow: 1;
+  }
 
-    min-height: 372px;
+  .diet__inner::before {
+    display: none;
+  }
+
+  .diet__type--cat-sit::before {
+    margin: 2px 92px 0 0;
+    right: 0;
+    top: auto;
+    left: auto;
+    width: 140px;
+    height: 196px;
+  }
+
+  .diet__type--cat-go::before {
+    margin: 0;
+    margin-top: 58px;
+    margin-right: 28px;
+    right: 0;
+    top: auto;
+    left: auto;
+    width: 268px;
+    height: 112px;
+  }
+
+  .diet__type::after {
+    content: "";
+    position: static;
+    display: block;
+    margin-top: 13px;
+    margin-left: 20px;
+    min-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #68b738;
+  }
+
+  .diet__type--cat-go::after {
+    margin-left: 54px;
+  }
+
+  .diet__title {
+    margin: 0;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 37.2px;
+  }
+
+  .diet__intro {
+    width: 100%;
+    margin: 24px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .diet__button {
+    margin: 0;
+    margin-top: 55px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+
+    border: none;
+  }
+
+  .diet__button-link {
+    padding: 0;
+    padding-right: 58px;
+  }
+
+  .diet__button-link::after {
+    top: 4px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .diet {
+  .diet .container {
     display: flex;
-    width: 1300px;
     justify-content: space-between;
-    padding: 0 40px;
   }
 
   .diet__type {
+    padding-top: 48px;
+    padding-right: 55px;
+    padding-bottom: 60px;
+    padding-left: 52px;
+    margin: 0;
     width: 570px;
-    margin-bottom: 0;
+  }
 
-    min-height: 374px;
+  .diet__type::after {
+    display: none;
+  }
+
+  .diet__inner::before {
+    display: block;
+    margin: 0;
+    margin-right: 63px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .diet__title {
+    text-align: center;
+    padding-top: 28px;
+  }
+
+  .diet__intro {
+    margin-top: 40px;
+  }
+
+  .diet__button {
+    margin-top: 30px;
+  }
+
+  .diet__type--cat-sit::before {
+    margin: 0;
+    margin-top: -6px;
+    margin-left: 12px;
+    right: auto;
+    top: auto;
+    left: auto;
+    width: 70px;
+    height: 98px;
+  }
+
+  .diet__type--cat-go::before {
+    margin: 0;
+    margin-top: 21px;
+    margin-left: -18px;
+    right: auto;
+    top: auto;
+    left: auto;
+    width: 134px;
+    height: 56px;
   }
 }
