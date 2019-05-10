@@ -1,16 +1,11 @@
 .how-to {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 20px;
   margin-bottom: 42px;
-
-  box-sizing: border-box;
-
-  min-height: 376px;
 }
 
 .how-to__title {
   margin: 0;
+  margin-top: -4px;
+  margin-bottom: 28px;
   padding: 0;
   font-size: 36px;
   line-height: 60px;
@@ -24,38 +19,108 @@
 }
 
 .how-to__item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 20px;
+
   font-size: 14px;
   line-height: 18px;
   font-family: "Arial", sans-serif;
   font-weight: normal;
   color: #444444;
+  counter-increment: item_number;
+}
+
+.how-to__item::before {
+  content: "";
+  position: static;
+  display: block;
+  margin-right: 20px;
+  min-width: 60px;
+  height: 60px;
+  background-color: #68b738;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-position: center;
+}
+
+.how-to__item--nutrient-materials::before {
+  background-image: url("../img/advantage-leaf@1x.png");
+}
+
+.how-to__item--powder::before {
+  background-image: url("../img/advantage-powder@1x.png");
+}
+
+.how-to__item--meal-replacement::before {
+  background-image: url("../img/advantage-dining@1x.png");
+}
+
+.how-to__item--time::before {
+  background-image: url("../img/advantage-clock@1x.png");
 }
 
 @media (min-width: @tablet-width) {
-  .how-to {
-    width: 768px;
-    padding: 0 30px;
-
-    min-height: 735px;
+  .how-to__title {
+    padding-top: 15px;
+    margin-bottom: 43px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .how-to__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
   }
 
   .how-to__item {
-    width: 354px;
+    flex-wrap: wrap;
+    margin-bottom: 58px;
+    padding-top: 30px;
+    padding-right: 75px;
+    padding-bottom: 45px;
+    width: 324px;
+
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 0;
+  }
+
+  .how-to__item::before {
+    margin-bottom: 32px;
+    min-width: 80px;
+    height: 80px;
+  }
+
+  .how-to__item::after {
+    position: absolute;
+    content: counter(item_number);
+    margin-top: 10px;
+    left: 115px;
+
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 281.07px;
+    line-height: 281.07px;
+    color: #f2f2f2;
+    z-index: -1;
+    text-align: center;
   }
 }
 
 @media (min-width: @desktop-width) {
   .how-to {
-    width: 1300px;
-    padding: 0 40px;
+    margin: 0;
+    padding: 0;
+    padding-top: 65px;
     margin-bottom: 12px;
+  }
 
-    min-height: 390px;
+  .how-to__title {
+    margin-bottom: 70px;
   }
 
   .how-to__list {
@@ -64,6 +129,9 @@
   }
 
   .how-to__item {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 45px;
     width: 245px;
   }
 }

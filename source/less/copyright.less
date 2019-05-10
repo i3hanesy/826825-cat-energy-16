@@ -1,8 +1,25 @@
-.copyright {
-  margin: 0;
-  padding: 0;
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.copyright__name {
+  font-size: 16px;
+  line-height: 16px;
   font-family: "Arial", sans-serif;
   color: #444444;
   font-weight: normal;
+}
+
+.copyright__icon {
+  width: 27px;
+  height: 35px;
+  background-color: green;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__icon {
+    margin-left: 22px;
+  }
 }

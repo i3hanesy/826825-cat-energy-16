@@ -1,15 +1,78 @@
 .form {
   margin: 0;
   padding: 0;
+  padding-top: 41px;
+  padding-bottom: 31px;
 }
 
 .form__fieldset {
   margin: 0;
   padding: 0;
+  padding-bottom: 9px;
   font-size: 24px;
   line-height: 24px;
 
   border: none;
+}
+
+.form__fieldset-titel {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.form__fieldset--program {
+  border: 1px solid #ededed;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-top: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 2px;
+}
+
+.form__fieldset--owner {
+  padding-top: 30px;
+}
+
+.form__fieldset--owner .form__fieldset-titel {
+  margin-bottom: 33px;
+}
+
+.form__fieldset--area {
+  padding-top: 5px;
+}
+
+.form__fieldset--area .form__fieldset-titel {
+  margin-bottom: 36px;
+}
+
+.form__fieldset--area .form__row {
+  flex-direction: column;
+}
+
+.form__fieldset--checkbox {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.form__fieldset--checkbox .form__fieldset-titel {
+  margin-bottom: 38px;
+}
+
+.form__button {
+  font-weight: bold;
+}
+
+.form__legend--wrapper {
+  padding-top: 20px;
+  padding-left: 62px;
 }
 
 .form__legend {
@@ -20,71 +83,131 @@
   font-weight: normal;
 }
 
-.form__row {
-  display: flex;
-  margin-bottom: 25px;
-  box-sizing: border-box;
-}
-
-.radio-field__label,
-.checkbox-field__label,
-.text-field__label {
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.text-field__label {
-  flex-shrink: 0;
-  margin-right: 15px;
-}
-
-.text-field__input {
-  width: 100%;
-
-  font-size: 16px;
-  line-height: 18px;
-  color: #444444;
-}
-
-.form__fieldset--area .form__row {
-  flex-direction: column;
-}
-
-.form__fieldset--area .text-field__input {
-  min-height: 150px;
-  box-sizing: border-box;
-}
-
 @media (min-width: @tablet-width) {
   .form {
-    paddig-left: 40px;
+    padding-top: 65px;
+    padding-left: 40px;
     padding-right: 38px;
+    padding-bottom: 72px;
   }
 
-  .radio-field__label,
-  .checkbox-field__label,
-  .text-field__label {
-    font-size: 20px;
-    line-height: 20px;
+  .form__fieldset-titel {
+    font-size: 36px;
+    line-height: 36px;
   }
 
-  .text-field__input {
-    font-size: 20px;
-    line-height: 20px;
+  .form__row {
+    display: flex;
+    margin-bottom: 20px;
   }
 
   .form__fieldset {
+    padding-bottom: 50px;
+
     font-size: 36px;
     line-height: 36px;
+  }
+
+  .form__fieldset--program {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 0;
+  }
+
+  .form__fieldset--owner {
+    padding-top: 75px;
+    padding-bottom: 40px;
+  }
+
+  .form__fieldset--owner .form__fieldset-titel {
+    margin-bottom: 76px;
+  }
+
+  .form__fieldset--area {
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+
+  .form__fieldset--area .form__fieldset-titel {
+    margin-bottom: 75px;
+  }
+
+  .form__fieldset--checkbox {
+    padding: 0;
+    padding-top: 45px;
+    padding-bottom: 13px;
+  }
+
+  .form__fieldset--checkbox .form__fieldset-titel {
+    margin-bottom: 67px;
+  }
+
+  .form__button--wrapper {
+    display: flex;
+  }
+
+  .form__button {
+    padding-top: 16px;
+    padding-bottom: 15px;
+    width: 284px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__legend--wrapper {
+    padding-top: 10px;
+  }
+
+  .form__legend {
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form {
+    padding: 0;
+    padding-top: 65px;
+    padding-bottom: 82px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
+  }
+
+  .form__fieldset--cat {
+    padding-bottom: 0;
+  }
+
+  .form__row {
+    margin-bottom: 19px;
+  }
+
+  .form__fieldset--cat .form__row:last-child {
+    margin-bottom: 0;
+  }
+
+  .form__fieldset--owner {
+    padding-top: 69px;
+  }
+
+  .form__fieldset--owner .form__fieldset-titel {
+    margin-bottom: 75px;
+  }
+
+  .form__fieldset--area {
+    padding-top: 8px;
+  }
+
+  .form__fieldset--checkbox {
+    padding-bottom: 20px;
+  }
+
+  .form__fieldset--checkbox .form__fieldset-titel {
+    margin-bottom: 70px;
   }
 
   .form__fieldset--owner,
@@ -106,5 +229,14 @@
 
   .checkbox-field {
     width: 245px;
+  }
+
+  .form__button {
+    width: 570px;
+  }
+
+  .form__legend {
+    padding-top: 0;
+    padding-left: 20px;
   }
 }
