@@ -79,10 +79,21 @@
   text-align: center;
 }
 
+.example__view {
+  position: relative;
+}
+
 .example__cats {
   margin-bottom: 30px;
+}
+
+.example__cat-img {
   width: 320px;
   height: 240px;
+}
+
+.example__cat--before {
+  display: block;
 }
 
 .example__cat--after {
@@ -92,7 +103,6 @@
 @media (min-width: @tablet-width) {
   .example {
     padding: 0;
-    padding-bottom: 74px;
     background-color: #ffffff;
   }
 
@@ -168,10 +178,65 @@
     margin-left: auto;
   }
 
+  .example__view {
+    padding-bottom: 74px;
+  }
+
+  .example__view::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+
+    top: 0;
+    bottom: 0;
+    right: 50%;
+
+    background-image: linear-gradient(to bottom, #ffffff 169px, #f2f2f2 169px);
+  }
+
+  .example__view::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+
+    top: 0;
+    bottom: 0;
+    left: auto;
+
+    background-image: linear-gradient(to bottom, #ffffff 169px, #eaeaea 169px);
+  }
+
   .example__cats {
-    margin-bottom: 20px;
-    height: 518px;
-    width: 708px;
+    margin-bottom: 17px;
+  }
+
+  .example__cat {
+    position: relative;
+    z-index: 1;
+  }
+
+  .example__cat-img {
+    margin-left: 15px;
+    max-width: 690px;
+    width: 690px;
+    height: 517px;
+  }
+
+  .example__cat--before {
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+
+    top: 0;
+    bottom: 0;
+
+    background-image: linear-gradient(to bottom, #ffffff 169px, #f2f2f2 169px);
+
+    z-index: 2;
+  }
+
+  .example__cat--after {
+    display: block;
   }
 }
 
@@ -179,17 +244,20 @@
   .example {
     margin: 0;
     padding: 0;
-    padding-bottom: 75px;
+    padding-top: 15px;
+
+    background-image: linear-gradient(to bottom, #ffffff 204px, #f2f2f2 204px);
   }
 
   .example__intro {
     flex-direction: column;
+    justify-content: flex-start;
   }
 
 
   .example__title {
-    margin-top: 70px;
-    margin-bottom: 145px;
+    margin-top: 55px;
+    margin-bottom: 143px;
   }
 
   .example__description {
@@ -199,6 +267,10 @@
 
   .example__list {
     margin-bottom: 49px;
+  }
+
+  .example__item-value {
+    background-color: transparent;
   }
 
   .example__cost {
@@ -214,7 +286,29 @@
     padding: 0;
   }
 
+  .example__view {
+    margin-right: -40px;
+  }
+
+  .example__view::before {
+    display: none;
+  }
+
+  .example__view::after {
+    background-image: linear-gradient(to bottom, #ffffff 189px, #eaeaea 189px);
+  }
+
   .example__cats {
-    margin-bottom: 53px;
+    margin-bottom: 38px;
+  }
+
+  .example__cat-img {
+    margin-left: -40px;
+    margin-right: 0;
+  }
+
+  .example__cat--before {
+    width: 50%;
+    background-image: linear-gradient(to bottom, #ffffff 189px, #f2f2f2 189px);
   }
 }

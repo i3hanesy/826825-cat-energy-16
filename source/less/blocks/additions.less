@@ -3,13 +3,15 @@
   padding-bottom: 35px;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .additions__list {
   margin: 0;
   margin-bottom: 36px;
   padding: 0;
+  width: 100%;
 
   list-style: none;
 }
@@ -20,11 +22,41 @@
 }
 
 .additions__titel {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
   margin-bottom: 34px;
-  width: 100%;
+  padding-right: 22px;
 
   font-size: 24px;
   line-height: 24px;
+
+  background-color: #ffffff;
+}
+
+.additions__titel::after,
+.additions__titel::before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-top: 12px;
+
+  top: 0;
+
+  width: 100vw;
+  height: 3px;
+
+  background-color: #68b738;
+
+  z-index: -1;
+}
+
+.additions__titel::after {
+  left: 0;
+}
+
+.additions__titel::before {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -35,9 +67,20 @@
   .additions__titel {
     margin: 0;
     margin-bottom: 81px;
-    margin-left: 39px;
+    padding-right: 37px;
+    padding-left: 37px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  .additions__titel::before {
+    display: block;
+    right: 100%;
+  }
+
+  .additions__titel::before,
+  .additions__titel::after {
+    margin-top: 25px;
   }
 
   .additions__list {
@@ -54,7 +97,7 @@
 
 @media (min-width: @desktop-width) {
   .additions {
-    padding-top: 15px;
+    padding-top: 13px;
     padding-bottom: 16px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -63,6 +106,13 @@
   .additions__titel {
     margin: 0;
     margin-bottom: 81px;
+    margin-left: -37px;
+    padding-left: 37px;
+  }
+
+  .additions__titel::before,
+  .additions__titel::after {
+    margin-top: 20px;
   }
 
   .additions__list {
@@ -75,9 +125,5 @@
     padding: 0;
     border-left: none;
     border-right: none;
-  }
-
-  .additions__stock {
-    width: 245px;
   }
 }

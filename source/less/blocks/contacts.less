@@ -1,7 +1,9 @@
 .contacts {
-  width: 320px;
-  margin: 0 auto;
   background-color: #ffffff;
+}
+
+.page-footer--no-index .contacts {
+  background-color: #f2f2f2;
 }
 
 .contacts__info {
@@ -32,13 +34,10 @@
 
 .contacts__map {
   height: 362px;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
-  .contacts {
-    width: 768px;
-  }
-
   .contacts__info {
     padding-top: 63px;
     padding-bottom: 57px;
@@ -92,5 +91,9 @@
   .contacts__address {
     text-align: left;
     padding-right: 30px;
+  }
+
+  .contacts__map {
+    height: 400px;
   }
 }

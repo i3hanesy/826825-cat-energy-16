@@ -48,7 +48,6 @@
 
 @media (min-width: @tablet-width) {
   .promo {
-    position: relative;
     margin-bottom: 0;
     padding-top: 45px;
 
@@ -58,6 +57,10 @@
 
   .promo__description {
     padding-left: 88px;
+  }
+
+  .promo .container {
+    position: relative;
   }
 
   .promo__titel {
@@ -84,7 +87,7 @@
 
   .promo__button {
     position: absolute;
-    top: 275px;
+    top: 228px;
     left: 120px;
     width: 245px;
 
@@ -98,16 +101,19 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    display: flex;
     padding-top: 0;
-    margin-bottom: 80px;
+  }
+
+  .promo .container {
+    display: flex;
   }
 
   .promo__image {
-    margin: 0;
-    margin-bottom: 72px;
+    margin-top: 15px;
+    margin-left: -59px;
+    margin-bottom: 56px;
     padding: 0;
-    width: 522px;
+    width: 613px;
     height: 499px;
   }
 

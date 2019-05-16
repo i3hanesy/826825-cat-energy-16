@@ -16,10 +16,45 @@
 }
 
 .form__fieldset-titel {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
   padding: 0;
   margin: 0;
+  padding-right: 23px;
   font-size: 24px;
   line-height: 24px;
+
+  background-color: #ffffff;
+}
+
+.form__fieldset-comment {
+  display: block;
+}
+
+.form__fieldset-titel::after,
+.form__fieldset-titel::before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-top: 12px;
+
+  top: 0;
+
+  width: 100vw;
+  height: 3px;
+
+  background-color: #68b738;
+
+  z-index: -1;
+}
+
+.form__fieldset-titel::after {
+  left: 0;
+}
+
+.form__fieldset-titel::before {
+  display: none;
 }
 
 .form__row {
@@ -92,8 +127,26 @@
   }
 
   .form__fieldset-titel {
+    padding: 0;
+    padding-right: 41px;
+    padding-left: 41px;
+    margin-left: -41px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  .form__fieldset-comment {
+    display: inline;
+  }
+
+  .form__fieldset-titel::before {
+    display: block;
+    right: 100%;
+  }
+
+  .form__fieldset-titel::after,
+  .form__fieldset-titel::before {
+    margin-top: 24px;
   }
 
   .form__row {
