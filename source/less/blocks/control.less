@@ -8,6 +8,8 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
+
+  cursor: pointer;
 }
 
 .control__togle-scale {
@@ -37,8 +39,11 @@
 
 @media (min-width: @tablet-width) {
   .control {
+    position: relative;
     display: flex;
     align-items: center;
+
+    z-index: 3;
   }
 
   .control__element {
@@ -49,8 +54,8 @@
   .control__togle {
     display: flex;
     justify-content: center;
-    margin-left: 23px;
-    margin-right: 23px;
+    margin-left: 25px;
+    margin-right: 20px;
     width: 428px;
     height: 6px;
     border-radius: 6px;
@@ -58,9 +63,24 @@
   }
 
   .control__togle-scale {
+    margin: 0;
     width: 34px;
     height: 34px;
     border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border-width: 2px;
+      border-color: rgb(104, 183, 56);
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
   }
 
   .control__togle-scale::before {
@@ -71,11 +91,5 @@
     top: 50%;
     margin-top: -4px;
     margin-left: -4px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .control {
-    justify-content: flex-end;
   }
 }
