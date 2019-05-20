@@ -13,6 +13,7 @@
   line-height: 24px;
 
   border: none;
+  overflow: hidden;
 }
 
 .form__fieldset-titel {
@@ -40,17 +41,14 @@
   margin-top: 12px;
 
   top: 0;
+  left: 100%;
 
-  width: 100vw;
+  width: 4000px;
   height: 3px;
 
   background-color: #68b738;
 
   z-index: -1;
-}
-
-.form__fieldset-titel::after {
-  left: 0;
 }
 
 .form__fieldset-titel::before {
@@ -120,10 +118,21 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding-top: 65px;
-    padding-left: 40px;
-    padding-right: 38px;
+    padding-top: 67px;
     padding-bottom: 72px;
+  }
+
+  .form .container {
+    padding-right: 67px;
+    padding-left: 71px;
+  }
+
+  .form__fieldset {
+    margin-bottom: 53px;
+    padding-bottom: 0;
+
+    font-size: 36px;
+    line-height: 36px;
   }
 
   .form__fieldset-titel {
@@ -141,6 +150,7 @@
 
   .form__fieldset-titel::before {
     display: block;
+    left: auto;
     right: 100%;
   }
 
@@ -151,37 +161,31 @@
 
   .form__row {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
-  .form__fieldset {
-    padding-bottom: 50px;
-
-    font-size: 36px;
-    line-height: 36px;
-  }
 
   .form__fieldset--program {
     margin-left: 0;
     margin-right: 0;
-    padding-top: 35px;
+    padding-top: 32px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 0;
   }
 
   .form__fieldset--owner {
-    padding-top: 75px;
-    padding-bottom: 40px;
+    margin-bottom: 43px;
+    padding-top: 22px;
   }
 
   .form__fieldset--owner .form__fieldset-titel {
-    margin-bottom: 76px;
+    margin-bottom: 75px;
   }
 
   .form__fieldset--area {
     padding-top: 5px;
-    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .form__fieldset--area .form__fieldset-titel {
@@ -189,7 +193,7 @@
   }
 
   .form__fieldset--checkbox {
-    padding: 0;
+    margin-bottom: 0;
     padding-top: 45px;
     padding-bottom: 13px;
   }
@@ -212,7 +216,7 @@
   }
 
   .form__legend--wrapper {
-    padding-top: 10px;
+    padding-top: 13px;
   }
 
   .form__legend {
@@ -224,11 +228,24 @@
 @media (min-width: @desktop-width) {
   .form {
     padding: 0;
-    padding-top: 65px;
-    padding-bottom: 82px;
+    padding-top: 63px;
+    padding-bottom: 81px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .form .container {
+    padding: 0 40px;
+  }
+
+  .form__top-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__fieldset {
+    margin-bottom: 70px;
   }
 
   .form__fieldset--cat {
@@ -244,7 +261,8 @@
   }
 
   .form__fieldset--owner {
-    padding-top: 69px;
+    padding-top: 0;
+    margin-bottom: 40px;
   }
 
   .form__fieldset--owner .form__fieldset-titel {
@@ -253,9 +271,12 @@
 
   .form__fieldset--area {
     padding-top: 8px;
+    margin-bottom: 46px;
   }
 
   .form__fieldset--checkbox {
+    margin-bottom: 0;
+    padding-top: 0;
     padding-bottom: 20px;
   }
 

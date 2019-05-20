@@ -2,6 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__name {
@@ -13,13 +22,15 @@
 }
 
 .copyright__icon {
-  width: 27px;
-  height: 35px;
-  background-color: green;
+  // min-width: 27px;
+  // height: 34px;
+  fill: #666666;
 }
 
 @media (min-width: @tablet-width) {
   .copyright__icon {
     margin-left: 22px;
+    width: 27px;
+    height: 34px;
   }
 }
