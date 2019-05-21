@@ -1,6 +1,6 @@
 .example {
   background-color: #f2f2f2;
-  padding-top: 17px;
+  padding-top: 15px;
   padding-bottom: 37px;
 }
 
@@ -87,6 +87,11 @@
   margin-bottom: 30px;
 }
 
+.example__cat {
+  width: 320px;
+  margin-left: -20px;
+}
+
 .example__cat-img {
   width: 320px;
   height: 240px;
@@ -102,8 +107,18 @@
 
 @media (min-width: @tablet-width) {
   .example {
+    position: relative;
     padding: 0;
     background-color: #ffffff;
+  }
+
+  .example::after {
+    content: "";
+    position: absolute;
+    height: 462px;
+    width: 100%;
+    bottom: 0;
+    background-image: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
   .example .container {
@@ -179,39 +194,18 @@
   }
 
   .example__view {
-    padding-bottom: 74px;
-  }
-
-  .example__view::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-
-    top: 0;
-    bottom: 0;
-    right: 50%;
-
-    background-image: linear-gradient(to bottom, #ffffff 169px, #f2f2f2 169px);
-  }
-
-  .example__view::after {
-    content: "";
-    position: absolute;
-    width: 100vw;
-
-    top: 0;
-    bottom: 0;
-    left: auto;
-
-    background-image: linear-gradient(to bottom, #ffffff 169px, #eaeaea 169px);
+    padding-bottom: 0;
   }
 
   .example__cats {
-    margin-bottom: 17px;
+    position: relative;
+    margin-bottom: 0;
   }
 
   .example__cat {
-    position: relative;
+    width: auto;
+    margin-left: 0;
+    padding-bottom: 79px;
     z-index: 1;
   }
 
@@ -228,7 +222,6 @@
     overflow: hidden;
 
     top: 0;
-    bottom: 0;
 
     background-image: linear-gradient(to bottom, #ffffff 169px, #f2f2f2 169px);
 
@@ -236,22 +229,32 @@
   }
 
   .example__cat--after {
+    background-image: linear-gradient(to bottom, #ffffff 169px, #eaeaea 169px);
     display: block;
+    position: relative;
+    top: 0;
+    bottom: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    margin: 0;
+    display: flex;
     padding: 0;
     padding-top: 15px;
+  }
 
-    background-image: linear-gradient(to bottom, #ffffff 204px, #f2f2f2 204px);
+  .example::after {
+    height: 462px;
+
+    background-image: linear-gradient(to right, #f2f2f2 55%, #eaeaea 55%);
   }
 
   .example__intro {
     flex-direction: column;
     justify-content: flex-start;
+
+    z-index: 1;
   }
 
 
@@ -288,18 +291,15 @@
 
   .example__view {
     margin-right: -40px;
-  }
-
-  .example__view::before {
-    display: none;
-  }
-
-  .example__view::after {
-    background-image: linear-gradient(to bottom, #ffffff 189px, #eaeaea 189px);
+    margin-bottom: -33px;
   }
 
   .example__cats {
-    margin-bottom: 38px;
+    // margin-bottom: 38px;
+  }
+
+  .example__cat {
+    padding-bottom: 131px;
   }
 
   .example__cat-img {
@@ -308,7 +308,10 @@
   }
 
   .example__cat--before {
-    width: 50%;
     background-image: linear-gradient(to bottom, #ffffff 189px, #f2f2f2 189px);
+  }
+
+  .example__cat--after {
+    background-image: linear-gradient(to bottom, #ffffff 189px, #eaeaea 189px);
   }
 }

@@ -45,6 +45,9 @@
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
           </div>
           <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp, img/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp, img/index-can-mobile@2x.webp 2x" width="280" height="270" alt="Банка корма кэт энерджи">
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
             <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Банка корма кэт энерджи">
@@ -120,17 +123,23 @@
             <div class="example__cats">
               <div class="example__cat example__cat--before">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp, img/before-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp, img/before-tablet@2x.webp 2x">
+                  <source  type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x" width="311" height="232" alt="Пухлый кот">
                   <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
                   <img class="example__cat-img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Пухлый кот">
                 </picture>
               </div>
               <div class="example__cat example__cat--after">
-              <picture>
-                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
-                <img class="example__cat-img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="311" height="240" alt="Тонкий кот">
-              </picture>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x" width="311" height="240" alt="Тонкий кот">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                  <img class="example__cat-img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="311" height="240" alt="Тонкий кот">
+                </picture>
               </div>
             </div>
             <div class="control">
@@ -172,20 +181,37 @@
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__linc--vkontakte" href="https://vk.com/htmlacademy">Мы в Контакте</a>
+                <a class="social__link" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">Мы в Контакте</span>
+                  <svg class="social__icon social__icon--vkontakte" width="22" height="12">
+                    <use xlink:href="img/sprite-icon.svg#icon-vk"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__linc--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+                <a class="social__link" href="https://www.instagram.com/htmlacademy">
+                  <span class="visually-hidden">Мы в Инсте</span>
+                  <svg class="social__icon social__icon--instagram" width="16" height="16">
+                    <use xlink:href="img/sprite-icon.svg#icon-insta"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__linc--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инсте</a>
+                <a class="social__link" href="https://www.facebook.com/htmlacademy">
+                  <span class="visually-hidden">Мы в Фейсбуке</span>
+                  <svg class="social__icon social__icon--facebook" width="10" height="19">
+                    <use xlink:href="img/sprite-icon.svg#icon-fb"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <b class="copyright__name">HTML Academy</b>
-              <img class="copyright__icon" src="#" alt="Логотип HTML Academy"><!--будет свг иконка-->
+              <svg class="copyright__icon" width="27" height="34" alt="Логотип HTML Academy">
+                <use xlink:href="img/sprite-icon.svg#htmlacademy"></use>
+              </svg>
             </a>
           </div>
         </div>

@@ -94,15 +94,25 @@
   display: inline-block;
   vertical-align: top;
   padding-top: 19px;
-  padding-right: 44px;
+  padding-right: 45px;
   padding-bottom: 22px;
   color: #111111;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    right: 0;
+    width: 33px;
+  }
 }
 
 .diet__button-link::after {
   content: "";
   position: absolute;
-  top: 22px;
+  top: 23px;
   right: 9px;
   width: 24px;
   height: 11px;
@@ -113,10 +123,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .diet {
-    padding-top: 80px;
-  }
-
   .diet__type {
     position: relative;
     display: flex;
@@ -207,6 +213,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .diet {
+    padding-top: 80px;
+  }
+
   .diet .container {
     display: flex;
     justify-content: space-between;
