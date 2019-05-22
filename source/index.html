@@ -40,7 +40,7 @@
       <div class="page-header__bottom promo">
         <div class="container">
           <div class="promo__description">
-            <h2 class="promo__titel">Функциональное
+            <h2 class="promo__title">Функциональное
           питание для котов</h2>
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
           </div>
@@ -166,12 +166,8 @@
             </address>
           </div>
         </div>
-        <!--временная картинка карты-->
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта">
-        </picture>
+        <div id="contacts-map" class="contacts__map">
+        </div>
       </div>
       <div class="container">
         <div class="page-footer__wrapper">
@@ -217,6 +213,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

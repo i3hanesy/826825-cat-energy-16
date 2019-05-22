@@ -3,7 +3,6 @@
 }
 
 .text-field__label {
-  margin-right: 16px;
   flex-shrink: 0;
 
   font-size: 16px;
@@ -13,10 +12,30 @@
   align-self: center;
 }
 
+.text-field:nth-of-type(1) .text-field__label--cat {
+  margin-right: 14px;
+}
+
+.text-field:nth-of-type(2) .text-field__label--cat {
+  margin-right: 17px;
+}
+
+.text-field:nth-of-type(3) .text-field__label--cat {
+  margin-right: 15px;
+}
+
+.text-field:nth-of-type(1) .text-field__label--owner {
+  margin-right: 12px;
+}
+
+.text-field:nth-of-type(2) .text-field__label--owner {
+  margin-right: 9px;
+}
+
 .text-field__input {
   margin: 0;
   padding: 0;
-  padding-left: 13px;
+  padding-left: 14px;
   padding-right: 13px;
   padding-top: 11px;
   padding-bottom: 13px;
@@ -70,9 +89,6 @@
   top: 14px;
 }
 
-.text-field__label--owner {
-  margin-right: 11px;
-}
 
 .text-field__input--area {
   min-height: 150px;
@@ -84,19 +100,46 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form__fieldset--owner .form__fieldset-title {
+    margin-bottom: 76px;
+  }
+
   .text-field__label {
-    margin-right: 19px;
     font-size: 20px;
     line-height: 20px;
   }
 
+  .text-field:nth-of-type(1) .text-field__label--cat {
+    margin-right: 17px;
+  }
+
+  .text-field:nth-of-type(2) .text-field__label--cat {
+    margin-right: 20px;
+  }
+
+  .text-field:nth-of-type(3) .text-field__label--cat {
+    margin-right: 17px;
+  }
+
+  .text-field:nth-of-type(1) .text-field__label--owner {
+    margin-right: 19px;
+  }
+
+  .text-field:nth-of-type(2) .text-field__label--owner {
+    margin-right: 13px;
+  }
+
   .text-field__input {
-    padding-left: 15px;
-    padding-top: 11px;
-    padding-bottom: 10px;
+    padding-left: 17px;
+    padding-top: 9px;
+    padding-bottom: 11px;
 
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .text-field__input--owner {
+    padding-left: 19px;
   }
 
   .text-field__icon--mail {
@@ -124,7 +167,20 @@
 }
 
 @media (min-width: @desktop-width) {
-  .text-field__label--owner {
+  .text-field__input {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .text-field:nth-of-type(1) .text-field__label--owner {
     margin-right: 22px;
+  }
+
+  .text-field:nth-of-type(2) .text-field__label--owner {
+    margin-right: 15px;
+  }
+
+  .text-field__icon--phone {
+    right: 18px;
   }
 }

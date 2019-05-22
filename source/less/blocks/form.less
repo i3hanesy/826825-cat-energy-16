@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   padding-top: 41px;
-  padding-bottom: 31px;
+  padding-bottom: 32px;
 }
 
 .form__fieldset {
@@ -16,7 +16,7 @@
   overflow: hidden;
 }
 
-.form__fieldset-titel {
+.form__fieldset-title {
   position: relative;
   display: inline-block;
   vertical-align: baseline;
@@ -33,8 +33,8 @@
   display: block;
 }
 
-.form__fieldset-titel::after,
-.form__fieldset-titel::before {
+.form__fieldset-title::after,
+.form__fieldset-title::before {
   content: "";
   position: absolute;
   display: block;
@@ -51,7 +51,7 @@
   z-index: -1;
 }
 
-.form__fieldset-titel::before {
+.form__fieldset-title::before {
   display: none;
 }
 
@@ -74,7 +74,7 @@
   padding-top: 30px;
 }
 
-.form__fieldset--owner .form__fieldset-titel {
+.form__fieldset--owner .form__fieldset-title {
   margin-bottom: 33px;
 }
 
@@ -82,7 +82,7 @@
   padding-top: 5px;
 }
 
-.form__fieldset--area .form__fieldset-titel {
+.form__fieldset--area .form__fieldset-title {
   margin-bottom: 36px;
 }
 
@@ -95,7 +95,7 @@
   padding-bottom: 15px;
 }
 
-.form__fieldset--checkbox .form__fieldset-titel {
+.form__fieldset--checkbox .form__fieldset-title {
   margin-bottom: 38px;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .form__legend--wrapper {
-  padding-top: 20px;
+  padding-top: 19px;
   padding-left: 62px;
 }
 
@@ -135,7 +135,7 @@
     line-height: 36px;
   }
 
-  .form__fieldset-titel {
+  .form__fieldset-title {
     padding: 0;
     padding-right: 41px;
     padding-left: 41px;
@@ -148,30 +148,30 @@
     display: inline;
   }
 
-  .form__fieldset-titel::before {
+  .form__fieldset-title::before {
     display: block;
     left: auto;
     right: 100%;
   }
 
-  .form__fieldset-titel::after,
-  .form__fieldset-titel::before {
+  .form__fieldset-title::after,
+  .form__fieldset-title::before {
     margin-top: 24px;
   }
 
   .form__row {
     display: flex;
-    margin-bottom: 19px;
+    margin-bottom: 20px;
   }
 
 
   .form__fieldset--program {
     margin-left: 0;
     margin-right: 0;
-    padding-top: 32px;
-    padding-left: 30px;
+    padding-top: 34px;
+    padding-left: 29px;
     padding-right: 30px;
-    padding-bottom: 0;
+    padding-bottom: 1px;
   }
 
   .form__fieldset--owner {
@@ -179,16 +179,12 @@
     padding-top: 22px;
   }
 
-  .form__fieldset--owner .form__fieldset-titel {
-    margin-bottom: 75px;
-  }
-
   .form__fieldset--area {
-    padding-top: 5px;
+    padding-top: 3px;
     margin-bottom: 0;
   }
 
-  .form__fieldset--area .form__fieldset-titel {
+  .form__fieldset--area .form__fieldset-title {
     margin-bottom: 75px;
   }
 
@@ -198,7 +194,7 @@
     padding-bottom: 13px;
   }
 
-  .form__fieldset--checkbox .form__fieldset-titel {
+  .form__fieldset--checkbox .form__fieldset-title {
     margin-bottom: 67px;
   }
 
@@ -228,8 +224,8 @@
 @media (min-width: @desktop-width) {
   .form {
     padding: 0;
-    padding-top: 63px;
-    padding-bottom: 81px;
+    padding-top: 67px;
+    padding-bottom: 82px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -245,7 +241,7 @@
   }
 
   .form__fieldset {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 
   .form__fieldset--cat {
@@ -253,7 +249,7 @@
   }
 
   .form__row {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
   }
 
   .form__fieldset--cat .form__row:last-child {
@@ -265,7 +261,7 @@
     margin-bottom: 40px;
   }
 
-  .form__fieldset--owner .form__fieldset-titel {
+  .form__fieldset--owner .form__fieldset-title {
     margin-bottom: 75px;
   }
 
@@ -280,8 +276,8 @@
     padding-bottom: 20px;
   }
 
-  .form__fieldset--checkbox .form__fieldset-titel {
-    margin-bottom: 70px;
+  .form__fieldset--checkbox .form__fieldset-title {
+    margin-bottom: 68px;
   }
 
   .form__fieldset--owner,

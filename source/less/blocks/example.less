@@ -1,7 +1,8 @@
 .example {
   background-color: #f2f2f2;
   padding-top: 15px;
-  padding-bottom: 37px;
+  // padding-bottom: 37px;
+  padding-bottom: 36px;
 }
 
 .example__title {
@@ -27,6 +28,7 @@
 .example__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -34,6 +36,7 @@
 }
 
 .example__item {
+  width: 124px;
   position: relative;
   margin-bottom: 6px;
   display: flex;
@@ -42,9 +45,10 @@
 }
 
 .example__item-result {
-  width: 124px;
-  padding-top: 14px;
-  padding-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 
   text-transform: uppercase;
   font-size: 24px;
@@ -55,10 +59,14 @@
 }
 
 .example__item-value {
+  display: inline-block;
+  vertical-align: top;
   align-self: center;
-  width: 85px;
-  margin-top: -11px;
-  padding-right: 10px;
+  // width: 85px;
+  margin-top: -9px;
+  margin-right: 19px;
+  margin-left: 19px;
+  padding-right: 12px;
   padding-left: 10px;
 
   font-size: 12px;
@@ -71,7 +79,7 @@
 }
 
 .example__cost {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 
   font-size: 14px;
   line-height: 20px;
@@ -109,7 +117,10 @@
   .example {
     position: relative;
     padding: 0;
+    padding-top: 42px;
     background-color: #ffffff;
+
+    border-top: 1px solid #e6e6e6;
   }
 
   .example::after {
@@ -152,21 +163,27 @@
 
   .example__list {
     width: 366px;
-    margin-bottom: 75px;
+    margin-bottom: 74px;
     justify-content: space-between;
   }
 
-  .example__item-result {
+  .example__item {
     width: 162px;
-    padding-bottom: 20px;
+  }
+
+  .example__item-result {
+    padding-bottom: 19px;
     font-size: 30px;
     line-height: 37.2px;
   }
 
   .example__item-value {
-    width: 142px;
-    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
     margin-top: -8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    // padding: 0;
     font-size: 14px;
     line-height: 14px;
 
@@ -242,6 +259,8 @@
     display: flex;
     padding: 0;
     padding-top: 15px;
+
+    border-top: none;
   }
 
   .example::after {
@@ -273,7 +292,7 @@
   }
 
   .example__item-value {
-    background-color: transparent;
+    background-color: #f2f2f2;
   }
 
   .example__cost {

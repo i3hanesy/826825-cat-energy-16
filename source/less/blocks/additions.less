@@ -23,7 +23,7 @@
   border-bottom: 1px solid #d9d9d9;
 }
 
-.additions__titel {
+.additions__title {
   position: relative;
   display: inline-block;
   vertical-align: baseline;
@@ -36,8 +36,8 @@
   background-color: #ffffff;
 }
 
-.additions__titel::after,
-.additions__titel::before {
+.additions__title::after,
+.additions__title::before {
   content: "";
   position: absolute;
   display: block;
@@ -53,21 +53,21 @@
   z-index: -1;
 }
 
-.additions__titel::after {
+.additions__title::after {
   left: 0;
 }
 
-.additions__titel::before {
+.additions__title::before {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
   .additions {
-    padding-top: 10px;
-    padding-bottom: 76px;
+    padding-top: 8px;
+    padding-bottom: 75px;
   }
 
-  .additions__titel {
+  .additions__title {
     margin: 0;
     margin-bottom: 81px;
     padding-right: 37px;
@@ -76,13 +76,13 @@
     line-height: 36px;
   }
 
-  .additions__titel::before {
+  .additions__title::before {
     display: block;
     right: 100%;
   }
 
-  .additions__titel::before,
-  .additions__titel::after {
+  .additions__title::before,
+  .additions__title::after {
     margin-top: 22px;
   }
 
@@ -110,15 +110,15 @@
     flex-wrap: wrap;
   }
 
-  .additions__titel {
+  .additions__title {
     margin: 0;
     margin-bottom: 81px;
     margin-left: -37px;
     padding-left: 37px;
   }
 
-  .additions__titel::before,
-  .additions__titel::after {
+  .additions__title::before,
+  .additions__title::after {
     margin-top: 22px;
   }
 
