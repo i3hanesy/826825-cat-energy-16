@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="fonts/oswaldmedium.woff2" rel="stylesheet">
-    <link href="fonts/oswaldregular.woff2" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet" >
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header page-header-unbg">
@@ -275,10 +273,10 @@
     </main>
     <section class="additions">
       <div class="container">
-        <h2 class="additions__titel">Дополнительные товары</h2>
+        <h2 class="additions__title">Дополнительные товары</h2>
         <ul class="additions__list">
           <li class="additions__list-item goods">
-            <h3 class="goods__titel">Сахарозаменитель</h3>
+            <h3 class="goods__title">Сахарозаменитель</h3>
             <div class="goods__info">
               <span class="goods__info-value">1 упаковка (100 г)</span>
               <span class="goods__info-price">200 Р.</span>
@@ -286,7 +284,7 @@
             <a class="goods__button button" href="#">Заказать</a>
           </li>
           <li class="additions__list-item goods">
-            <h3 class="goods__titel">Питьевая вода</h3>
+            <h3 class="goods__title">Питьевая вода</h3>
             <div class="goods__info">
               <span class="goods__info-value">5 литров</span>
               <span class="goods__info-price">50 Р.</span>
@@ -294,7 +292,7 @@
             <a class="goods__button button" href="#">Заказать</a>
           </li>
           <li class="additions__list-item goods">
-            <h3 class="goods__titel">Молоко</h3>
+            <h3 class="goods__title">Молоко</h3>
             <div class="goods__info">
               <span class="goods__info-value">1 литр</span>
             <span class="goods__info-price">100 Р.</span>
@@ -302,7 +300,7 @@
             <a class="goods__button button" href="#">Заказать</a>
           </li>
           <li class="additions__list-item goods">
-            <h3 class="goods__titel">Витамины</h3>
+            <h3 class="goods__title">Витамины</h3>
             <div class="goods__info">
               <span class="goods__info-value">1 упаковка (30 г)</span>
               <span class="goods__info-price">300 Р.</span>
@@ -327,12 +325,8 @@
             </address>
           </div>
         </div>
-        <!--временная картинка карты-->
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта">
-        </picture>
+        <div id="contacts-map" class="contacts__map">
+        </div>
       </div>
       <div class="container">
         <div class="page-footer__wrapper">
@@ -370,14 +364,15 @@
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <b class="copyright__name">HTML Academy</b>
-              <svg class="copyright__icon" width="27" height="34" alt="Логотип HTML Academy">
-                <use xlink:href="img/sprite-icon.svg#htmlacademy"></use>
+              <svg class="copyright__icon" width="27" height="34">
+                <use xlink:href="img/sprite-icon.svg#icon-htmlacademy"></use>
               </svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

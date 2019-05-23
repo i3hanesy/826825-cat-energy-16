@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="fonts/oswaldmedium.woff2" rel="stylesheet">
-    <link href="fonts/oswaldregular.woff2" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet" >
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header page-header-unbg">
@@ -47,16 +45,16 @@
           <fieldset class="form__fieldset form__fieldset--cat">
             <h2 class="visually-hidden">Данные кота</h2>
             <div class="form__row text-field">
-              <label class="text-field__label" for="cat-name">Имя:*</label>
+              <label class="text-field__label text-field__label--cat" for="cat-name">Имя:*</label>
               <input class="text-field__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
             </div>
             <div class="form__row text-field">
-              <label class="text-field__label" for="cat-weight">Вес (КГ):*</label>
+              <label class="text-field__label text-field__label--cat" for="cat-weight">Вес (КГ):*</label>
               <input class="text-field__input" type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
             </div>
             <div class="form__row text-field">
-              <label class="text-field__label" for="cat-age">Возраст (Лет):</label>
-              <input class="text-field__input" type="text" name="cat-age" id="cat-age" placeholder="7" required>
+              <label class="text-field__label text-field__label--cat" for="cat-age">Возраст (Лет):</label>
+              <input class="text-field__input" type="text" name="cat-age" id="cat-age" placeholder="7">
             </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--program">
@@ -77,7 +75,7 @@
           </div>
           <fieldset class="form__fieldset form__fieldset--owner">
           <div class="container">
-            <h2 class="form__fieldset-titel">Контактные данные <span class="form__fieldset-comment">(владельца кота)</span></h2>
+            <h2 class="form__fieldset-title">Контактные данные <span class="form__fieldset-comment">(владельца кота)</span></h2>
             <div class="form__fieldset-wrapper">
               <div class="form__row text-field">
                 <label class="text-field__label text-field__label--owner" for="email">E-mail:*</label>
@@ -87,7 +85,7 @@
                 </svg>
               </div>
               <div class="form__row text-field">
-                <label class="text-field__label" for="phone">Телефон:*</label>
+                <label class="text-field__label text-field__label--owner" for="phone">Телефон:*</label>
                 <input class="text-field__input text-field__input--owner" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
                 <svg class="text-field__icon text-field__icon--phone" width="20px" height="20px">
                   <use xlink:href="img/sprite-icon.svg#icon-phone"></use>
@@ -98,7 +96,7 @@
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--area">
           <div class="container">
-            <h2 class="form__fieldset-titel">Комментарий</h2>
+            <h2 class="form__fieldset-title">Комментарий</h2>
             <div class="form__row text-field">
               <label class="text-field__label visually-hidden" for="comment">Введите комментарий</label>
               <textarea class="text-field__input text-field__input--area" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -107,7 +105,7 @@
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--checkbox">
           <div class="container">
-            <h2 class="form__fieldset-titel">Дополнительно</h2>
+            <h2 class="form__fieldset-title">Дополнительно</h2>
             <div class="form__fieldset-wrapper form__fieldset-wrapper--checkbox">
               <div class="form__row checkbox-field">
                 <input class="checkbox-field__input visually-hidden" type="checkbox" name="sweetener" id="sweetener-filter" checked>
@@ -151,12 +149,8 @@
             </address>
           </div>
         </div>
-        <!--временная картинка карты-->
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта">
-        </picture>
+        <div id="contacts-map" class="contacts__map">
+        </div>
       </div>
       <div class="container">
         <div class="page-footer__wrapper">
@@ -194,14 +188,15 @@
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <b class="copyright__name">HTML Academy</b>
-              <svg class="copyright__icon" width="27" height="34" alt="Логотип HTML Academy">
-                <use xlink:href="img/sprite-icon.svg#htmlacademy"></use>
+              <svg class="copyright__icon" width="27" height="34">
+                <use xlink:href="img/sprite-icon.svg#icon-htmlacademy"></use>
               </svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
