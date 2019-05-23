@@ -41,6 +41,7 @@
   padding-bottom: 13px;
   width: 100%;
 
+  font-family: "Oswald", "Arial", sans-serif;
   letter-spacing: -0.4px;
   font-size: 16px;
   line-height: 18px;
@@ -77,16 +78,19 @@
 
 .text-field__icon {
   position: absolute;
+
+  height: 42px;
+  top: 1px;
+  background-color: #ffffff;
 }
 
 .text-field__icon--mail {
+  width: 16px;
   right: 16px;
-  top: 16px;
 }
 
 .text-field__icon--phone {
   right: 12px;
-  top: 14px;
 }
 
 
@@ -97,6 +101,7 @@
 
 .text-field__input--owner {
   padding-right: 40px;
+  padding-top: 12px;
 }
 
 @media (min-width: @tablet-width) {
@@ -142,14 +147,17 @@
     padding-left: 19px;
   }
 
+  .text-field__icon {
+    height: 50px;
+    background-color: #ffffff;
+  }
+
   .text-field__icon--mail {
-    right: 19px;
-    top: 21px;
+    right: 20px;
   }
 
   .text-field__icon--phone {
     right: 16px;
-    top: 18px;
   }
 
   .text-field__label--owner {
