@@ -10,6 +10,7 @@ var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var server = require("browser-sync").create();
 var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
 var del = require("del");
 
 var imagemin = require("gulp-imagemin");
@@ -33,7 +34,8 @@ gulp.task("css", function () {
 
 gulp.task("html", function() {
   return gulp.src("source/*.html")
-    .pipe(posthtml())
+    .pipe(posthtml([
+      include()]))
     .pipe(gulp.dest("build"));
 });
 
